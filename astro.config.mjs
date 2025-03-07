@@ -6,8 +6,10 @@ import tailwindcss from "@tailwindcss/vite";
 
 import vercel from "@astrojs/vercel";
 
+import react from "@astrojs/react";
+
 export default defineConfig({
-  integrations: [clerk()],
+  integrations: [clerk(), react()],
   adapter: vercel(),
   output: "server",
 
