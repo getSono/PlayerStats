@@ -1,0 +1,46 @@
+---
+import { SignedIn, SignedOut, UserButton, SignInButton } from "@clerk/astro/components";
+import "../styles/global.css";
+---
+
+<nav class="flex items-center justify-between p-4 bg-gray-900 text-white">
+  <div class="text-xl font-geist font-bold">PlayerStats</div>
+  <div>
+    <SignedOut>
+      <SignInButton mode="modal" class="bg-blue-500 px-4 py-2 rounded hover:bg-blue-600 button" />
+    </SignedOut>
+    <SignedIn>
+      <UserButton />
+    </SignedIn>
+  </div>
+</nav>
+<style>
+/* From Uiverse.io by zjssun */ 
+.button {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff;
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+.button:hover,
+:focus {
+  color: #ffffff;
+  background: #73af87;
+  border: 1px solid #73af87;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #73af87, 0 0 20px #73af87, 0 0 50px #73af87,
+    0 0 100px #73af87;
+}
+
+
+</style>
