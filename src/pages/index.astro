@@ -2,6 +2,8 @@
 import { SignedIn, SignedOut, SignIn, Waitlist } from "@clerk/astro/components";
 import Navbar from "../layouts/Navbar.astro";
 import { Button } from "@/components/ui/button"
+import { Toaster, toast } from "sonner"
+
 ---
 
 <!DOCTYPE html>
@@ -31,6 +33,7 @@ import { Button } from "@/components/ui/button"
                     <Button asChild>
                         <a class="login-btn" href="https://accounts.sononetwork.de/sign-in">Login</a>
                     </Button>
+                      
                 </div>
             </div>
         </SignedOut>
