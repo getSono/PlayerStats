@@ -1,6 +1,7 @@
 ---
-import { SignedIn, SignedOut, Waitlist } from "@clerk/astro/components";
+import { SignedIn, SignedOut, SignIn, Waitlist } from "@clerk/astro/components";
 import Navbar from "../layouts/Navbar.astro";
+import { Button } from "@/components/ui/button"
 ---
 
 <!DOCTYPE html>
@@ -26,11 +27,19 @@ import Navbar from "../layouts/Navbar.astro";
            /* <div class="max-w-4xl text-center p-8 bg-gray-800 rounded-2xl shadow-lg flex flex-col items-center">
                 <h1 class="text-4xl font-bold mb-4">PlayerStats</h1>
                 <p class="text-lg text-gray-300 mb-6">Verwalte deine Stats mit unserem Dashboard.</p>
-                <div class="w-full flex justify-center">
-                    <Waitlist />
+                <div class="w-full flex justify-center bg-blue-400 rounded">
+                    <Button asChild>
+                        <a class="login-btn" href="https://accounts.sononetwork.de/sign-in">Login</a>
+                    </Button>
                 </div>
             </div>
         </SignedOut>
     </div>
 </body>
+<style>
+    .login-btn {
+        width: 100%;
+        padding: 10px 0 10px 0;
+    }
+</style>
 </html>
